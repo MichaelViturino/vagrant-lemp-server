@@ -22,13 +22,7 @@ phpmyadmin      phpmyadmin/mysql/app-pass       password $DB_ROOT_PASSWORD
 EOF
 
 echo "--- Instalando pacotes basicos ---"
-sudo apt-get install -y \
-    software-properties-common \
-    vim \
-    curl \
-    git-core \
-    zip \
-    unzip 
+sudo apt-get install -y software-properties-common vim curl git-core zip unzip 
 
 echo "--- Instalando nginx ---"
 sudo add-apt-repository ppa:nginx/stable
@@ -54,16 +48,8 @@ echo "--- Reiniciando MySQL ---"
 sudo service mysql restart
 
 echo "--- Instalando phpMyAdmin ---"
-#sudo phpenmod mcrypt
-#sudo phpenmod mbstring
 sudo apt-get install -y phpmyadmin 
-#sudo ln -s /usr/share/phpmyadmin /var/www/html
 sudo service php7.2-fpm restart
-#sed -i '$127.0.0.1       phpmyadmin' /etc/hosts
-
-
-#sudo service apache2 stop 
-#sudo update-rc.d apache2 disable
 sudo service nginx start
 
 echo "--- Baixando e Instalando Composer ---"
