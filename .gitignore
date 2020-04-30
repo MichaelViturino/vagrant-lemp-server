@@ -1,3 +1,5 @@
 /.vagrant/*
 /nginx/sites-avaiable/default
 /nginx/sites-enabled/default
+html/index.nginx-debian.html
+nginx/sites-available/default
