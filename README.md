@@ -42,4 +42,3 @@ Pastas
 ===========
 
  - root web server - /html
- - configuração nginx - /nginx/sites-avaiable e /nginx/sites-enable

@@ -50,6 +50,12 @@ sudo service mysql restart
 echo "--- Instalando phpMyAdmin ---"
 sudo apt-get install -y phpmyadmin 
 sudo service php7.2-fpm restart
+
+echo "--- Sincronizando confs ---"
+sudo cp /vagrant/config/nginx-sites/* /etc/nginx/sites-enabled
+sudo cp /vagrant/config/nginx-sites/* /etc/nginx/sites-available
+
+sudo service nginx stop
 sudo service nginx start
 
 echo "--- Baixando e Instalando Composer ---"
