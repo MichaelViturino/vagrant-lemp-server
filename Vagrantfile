@@ -31,4 +31,6 @@ Vagrant.configure("2") do |config|
 		}
 	end	
 
+  config.vm.provision :shell, inline: "sudo service nginx stop ; sudo service nginx start", run: 'always'
+  
 end
