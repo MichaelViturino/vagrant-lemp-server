@@ -41,5 +41,5 @@ phpmyadmin - http://192.168.33.10:8081/
 Pastas
 ===========
 
-root web server - /html
-configuração nginx - /nginx/sites-avaiable e /nginx/sites-enable
+ - root web server - /html
+ - configuração nginx - /nginx/sites-avaiable e /nginx/sites-enable

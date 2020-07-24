@@ -58,3 +58,12 @@ sudo mv composer.phar /usr/local/bin/composer
 
 sudo apt-get install -y redis-server
 sudo apt-get install -y php7.2-redis
+
+sudo ufw allow 8081
+sudo ufw disable
+
+echo "--- Configurando swap ---"
+sudo dd if=/dev/zero of=/var/swapfile bs=1M count=1024 
+sudo chmod 0600 /var/swapfile
+sudo mkswap /var/swapfile
+sudo swapon /var/swapfile
