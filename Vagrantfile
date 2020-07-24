@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.network "forwarded_port", guest: 8081, host: 8081
   
-  config.vm.synced_folder "html", "/var/www/html",  owner: "www-data", group: "www-data", mount_options: ['dmode=777','fmode=666']
+  config.vm.synced_folder "html", "/var/www/html",  type: "nfs", owner: "www-data", group: "www-data", mount_options: ['dmode=777','fmode=666']
   config.vm.synced_folder "nginx/sites-available", "/etc/nginx/sites-available", owner: "vagrant", group: "vagrant", mount_options: ['dmode=777','fmode=666']
   config.vm.synced_folder "nginx/sites-enabled", "/etc/nginx/sites-enabled", owner: "vagrant", group: "vagrant", mount_options: ['dmode=777','fmode=666']
 
